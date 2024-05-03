@@ -9,18 +9,18 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <BrowserRouter basename="/in_trade">
-    <AppNavbar />    
-      <div className="container">      
+    <div className="container"> 
+    <AppNavbar />        
+      <BrowserRouter basename="/in_trade">   
         <Routes>
           <Route exact path="/in_trade" element={<Home />} /> 
           <Route path="/Contact" element={<Contact/>} />         
           <Route path="/signup" elment={<Signup/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
-       
+       </BrowserRouter>
       </div>
-     </BrowserRouter>
+     
   );
 }
 
