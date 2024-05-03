@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="container"> 
     <AppNavbar />        
-      <BrowserRouter basename="/in_trade">   
+      <BrowserRouter basename="/${process.env.PUBLIC_URL">   
         <Routes>
-          <Route exact path="/in_trade" element={<Home />} /> 
+          <Route path="" element={<Home/> } /> 
           <Route path="/Contact" element={<Contact/>} />         
           <Route path="/signup" elment={<Signup/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
