@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router,Routes as Routes, Route } from 'react-router-dom';
+import { BrowserRouter,Routes as Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import AppNavbar from './components/AppNavbar';
 import Signup from './components/Signup';
@@ -9,18 +9,18 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <Router>
-    <AppNavbar />
-    
-      <div className="">
+    <BrowserRouter basename="/in_trade">
+    <AppNavbar />    
+      <div className="container">      
         <Routes>
-          <Route path="/" exact element={<Home />} /> 
+          <Route exact path="/in_trade" element={<Home />} /> 
           <Route path="/Contact" element={<Contact/>} />         
           <Route path="/signup" elment={<Signup/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
+       
       </div>
-    </Router>
+     </BrowserRouter>
   );
 }
 
